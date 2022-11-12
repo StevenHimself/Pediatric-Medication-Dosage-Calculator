@@ -31,11 +31,16 @@ public class Patient {
     }
 
     public void setWeight() {
-        this.weight = -1;
-        while(this.weight < 0) {
+        this.weight = 0;
+        while(this.weight <= 0) {
             try {
-                this.weight = Integer.parseInt(JOptionPane.showInputDialog("What is the patient's weight?"));
-            } catch (NumberFormatException e) {
+                this.weight = Integer.parseInt(JOptionPane.showInputDialog("Please enter the patient's weight (kg)"));
+
+                if(this.weight <= 0) {
+                    throw new NumberFormatException();
+                }
+            }
+            catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Please enter a valid weight.",
                         "ERROR", JOptionPane.ERROR_MESSAGE);
             }

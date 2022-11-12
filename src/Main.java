@@ -13,8 +13,8 @@ public class Main {
         medication.setMedicationName();
         patient.setWeight();
 
-        patient.toString();
-        medication.toString();
+        System.out.println(patient);
+        System.out.println(medication);
 
     }
 }

@@ -59,7 +59,6 @@ public class Medication {
 
     //return Dosage based on weight of patient and concentration of medication
     public int calculateCC(Medication medication, Patient patient) {
-
         int calculatedCC = 0;
         int patientWeight = patient.getWeight();
 
